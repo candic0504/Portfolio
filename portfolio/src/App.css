@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+  background-color: #dec7a0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+
+}
+
+
+@font-face {
+  font-family: 'riesling';
+  src: url('/fonts/riesling.ttf');
+}
+
+@font-face {
+  font-family: 'light';
+  src: url('/fonts/light.ttf');
+}
+
+
+  
+h1{
+  font-family: 'riesling';
+  font-size: 5em;
+  color: #bc7417;
+}
+
+p{
+  font-family: 'light';
+  font-size: 0.5em;
+  font-weight: bold;
+  color: black;
+}
+
+.bouton-container{
+  display: flex;
+  gap: 1em;
+}
+
