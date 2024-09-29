@@ -28,24 +28,22 @@ function App() {
             <p>Let's create a world where the development IT collide with the design and the creativity</p>
         </div>
         <div className='bouton-container'>
-            <Button titre="Download my CV" url="https://acrobat.adobe.com/id/urn:aaid:sc:EU:88f71428-3676-4184-990d-c062a8b22bec"></Button>
-            <Button titre="Contact Me" url="https://acrobat.adobe.com/id/urn:aaid:sc:EU:88f71428-3676-4184-990d-c062a8b22bec"></Button>
+            <Button titre="Download my CV" url="https://acrobat.adobe.com/id/urn:aaid:sc:EU:88f71428-3676-4184-990d-c062a8b22bec" className="CV"></Button>
+            <Button titre="Contact Me" url="https://acrobat.adobe.com/id/urn:aaid:sc:EU:88f71428-3676-4184-990d-c062a8b22bec" className="Contact"></Button>
         </div>
         <div className='switch'>
-          <label>
-            {theme === "jour" ? "Mode Jour" : "Mode nuit"}
-          </label>
-          <ReactSwitch onChange={changementTheme} checked={theme === "nuit"} onColor="#86d3ff" 
-              offColor="#888"    
-              onHandleColor="#2693e6" 
-              offHandleColor="#ccc"   
+          <ReactSwitch onChange={changementTheme} checked={theme === "nuit"} 
+              onColor="#FFFFFF" 
+              offColor="#C4FDFB"    
+              onHandleColor="#F1895C" 
+              offHandleColor="#66B7AD"   
               handleDiameter={30} 
-              uncheckedIcon={false} 
-              checkedIcon={false}  
+              checkedIcon={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', fontSize: 25, color: 'white' }}>🌞</div>}
+              uncheckedIcon={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', fontSize: 25, color: 'white'}}>🌚</div>} 
               boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)" 
               activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)" 
-              height={20} 
-              width={48}/>
+              height={40} 
+              width={80}/>
         </div>
       </div>
     </ThemeContext.Provider>

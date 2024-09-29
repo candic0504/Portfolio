@@ -9,6 +9,24 @@
 
 }
 
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  width: 10em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: 'riesling';
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
 
 @font-face {
   font-family: 'riesling';
@@ -20,13 +38,6 @@
   src: url('/fonts/light.ttf');
 }
 
-
-  
-h1{
-  font-family: 'riesling';
-  font-size: 5em;
-  color: #bc7417;
-}
 
 p,label{
   font-family: 'light';
@@ -47,15 +58,71 @@ p,label{
   height: 100px;
   justify-content: center;
   align-items: center;
+  box-shadow: #00000008; 
+
 }
 
 /* THEMES */
 #jour {
-  background-color: #dec7a0;
+
+  /*
+  #B1A09B
+  #FEECE6
+  #FAD7C4
+  #66B7AD
+  #C4FDFB
+  */
+  background-color: #FAD7C4;
 }
 
 #nuit {
-  background-color: #000130;
+
+  /*
+  #2E3244
+  #C5C6C6
+  #FFFFFF
+  #F1895C
+  #516079
+  */
+  background-color:#2E3244;
+}
+
+#jour h1{
+  font-family: 'riesling';
+  font-size: 5em;
+  color: #66B7AD;
+}
+
+#jour button:hover{
+  border-color: #66B7AD;
+  color: #66B7AD;
+}
+#jour button{
+  background-color: #FEECE6;
+  color: #B1A09B;
+}
+
+#jour p{
+  color: #66B7AD
+}
+
+#nuit h1{
+  font-family: 'riesling';
+  font-size: 5em;
+  color: #F1895C;
+}
+
+#nuit p{
+  color: white;
+}
+
+#nuit button:hover{
+  border-color: #F1895C;
+  color: #F1895C;
+}
+#nuit button{
+  background-color: #516079;
+  color: #C5C6C6;
 }
 
 
