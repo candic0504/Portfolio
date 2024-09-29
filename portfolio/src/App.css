@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: #dec7a0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,15 +28,35 @@ h1{
   color: #bc7417;
 }
 
-p{
+p,label{
   font-family: 'light';
   font-size: 0.5em;
   font-weight: bold;
   color: black;
+  padding-right: 20px;
 }
 
 .bouton-container{
   display: flex;
   gap: 1em;
 }
+
+.switch{
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* THEMES */
+#jour {
+  background-color: #dec7a0;
+}
+
+#nuit {
+  background-color: #000130;
+}
+
+
 
