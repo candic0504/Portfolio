@@ -1,7 +1,7 @@
 
 import './App.css';
+
 import { Button } from './Components/Button';
-import image from './github.png';
 import { createContext, useState, useEffect } from 'react';
 import ReactSwitch from 'react-switch';
 
@@ -43,7 +43,7 @@ function App() {
       <div className="App" id={theme}>
         <div className="etoiles-container"></div>
         <a href="https://github.com/candic0504" target="_blank" rel="noreferrer"> 
-          <img src={image} style={{ width: '180px', height: 'auto', margin: '0', position: 'absolute', top: '0', left: '0' }}></img>
+          <img src={`${process.env.PUBLIC_URL}/github.png`}  style={{ width: '180px', height: 'auto', margin: '0', position: 'absolute', top: '0', left: '0' }}></img>
         </a>
         <div className='presentation'>
             <h1>Candice Legay</h1>

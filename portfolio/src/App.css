@@ -138,7 +138,7 @@ p{
 
 #nuit .etoile {
   position: absolute;
-  background-image: url('/src/etoile.png'); 
+  background-image: url('/public/etoile.png'); 
   background-size: contain; 
   background-repeat: no-repeat; 
   width: 10px; 
