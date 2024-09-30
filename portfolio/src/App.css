@@ -45,8 +45,37 @@ button:focus-visible {
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer');
 }
 
+@media only screen and (max-width: 760px) {
+  p{
+    margin-left: 3em;
+    margin-right: 2em;
+  }
+
+  .bouton-container{
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+  }
+
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    width: 10em;
+    padding: 0.5em 1em;
+    font-size: 0.7em;
+    font-weight: 500;
+    font-family: 'riesling';
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+
+}
+
 h1 {
   margin-bottom: 0.1em;
+
 }
 
 p{
