@@ -3,7 +3,9 @@ import './Button.css';
 export function Button({titre,url}){
     return(
         <div>
-            <button>{titre}</button>
+            <a href={url} target="_blank">
+                <button>{titre}</button>
+            </a>
         </div>
     );
 }

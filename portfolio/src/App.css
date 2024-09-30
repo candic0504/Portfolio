@@ -38,8 +38,11 @@ button:focus-visible {
   src: url('/fonts/light.ttf');
 }
 
+h1 {
+  margin-bottom: 0.1em;
+}
 
-p,label{
+p{
   font-family: 'light';
   font-size: 0.5em;
   font-weight: bold;
@@ -48,6 +51,7 @@ p,label{
 }
 
 .bouton-container{
+  margin-top: 1em;
   display: flex;
   gap: 1em;
 }
