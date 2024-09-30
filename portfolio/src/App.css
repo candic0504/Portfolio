@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  overflow: hidden;
+  position: relative;
 
 }
 
@@ -36,6 +38,11 @@ button:focus-visible {
 @font-face {
   font-family: 'light';
   src: url('/fonts/light.ttf');
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer');
 }
 
 h1 {
@@ -129,5 +136,23 @@ p{
   color: #C5C6C6;
 }
 
+#nuit .etoile {
+  position: absolute;
+  background-image: url('/src/etoile.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  width: 10px; 
+  height: 10px; 
+  animation: fall 5s linear; 
+}
+
+@keyframes fall {
+  from {
+    top: -10px; 
+  }
+  to {
+    top: 100%; 
+  }
+}
 
 
