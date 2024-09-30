@@ -2,7 +2,7 @@
 import './App.css';
 import { Button } from './Components/Button';
 import image from './github.png';
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import ReactSwitch from 'react-switch';
 
 export const ThemeContext = createContext(null);
@@ -17,9 +17,31 @@ function App() {
     setTheme((curr)=> (curr === "jour" ? "nuit" : "jour"));
   }
 
+  // Fonction pour créer une étoile
+  const etoile = () => {
+    const container = document.querySelector('.etoiles-container');
+    const e = document.createElement('div');
+    e.setAttribute('class', 'etoile');
+    container.appendChild(e); // Ajoute les étoiles au conteneur
+    e.style.left = Math.random() * window.innerWidth + 'px';
+  
+    // Supprime l'étoile après 5 secondes
+    setTimeout(() => {
+      container.removeChild(e);
+    }, 5000);
+  };
+  
+
+  // Utilisation de useEffect pour créer les étoiles
+  useEffect(() => {
+    const interval = setInterval(etoile, 1000);
+    return () => clearInterval(interval); // Nettoyer l'intervalle au démontage
+  }, []);
+
   return (
     <ThemeContext.Provider value={{theme,changementTheme}}>
       <div className="App" id={theme}>
+        <div className="etoiles-container"></div>
         <a href="https://github.com/candic0504" target="_blank" rel="noreferrer"> 
           <img src={image} style={{ width: '180px', height: 'auto', margin: '0', position: 'absolute', top: '0', left: '0' }}></img>
         </a>
