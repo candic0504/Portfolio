@@ -8,8 +8,6 @@ import Accueil from './pages/accueil';
 
 export default function App() {
 
-  
-
   return (
     <div className="App" >
       <Accueil/>

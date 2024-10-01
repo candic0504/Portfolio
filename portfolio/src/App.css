@@ -1,14 +1,88 @@
+
+
+@media only screen and (max-width: 760px) {
+  p{
+    margin-left: 3em;
+    margin-right: 2em;
+  }
+
+  .bouton-container{
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+  }
+
+  
+
+}
+
+@font-face {
+  font-family: 'riesling';
+  src: url('../fonts/riesling.ttf');
+}
+
+@font-face {
+  font-family: 'light';
+  src: url('../fonts/light.ttf');
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   overflow: hidden;
   position: relative;
+}
 
+/* Structure générale */
+.main-layout {
+  display: flex;
+  height: 100vh; 
+}
+
+/* Colonne gauche (sidebar) */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%; 
+  padding: 20px;
+
+  position: relative;
+  height: 100vh; 
+}
+
+.side-bar img {
+  margin-bottom: 20px;
+}
+
+/* Correction du switch */
+.switch {
+  margin-top: auto; 
+  margin-bottom: 30px; 
+  width: 30%; 
+  display: flex;
+  justify-content: center;
+}
+
+/* Colonne droite (contenu principal) */
+.content {
+  flex: 1; 
+  overflow-y: auto; 
+  padding: 2em;
+  -webkit-overflow-scrolling: touch; 
+  scrollbar-width: none;
+}
+
+
+/* Présentation */
+.presentation {
+  text-align: center;
+  margin-bottom: 5em;
+  margin-top: 10em;
 }
 
 button {
@@ -30,55 +104,12 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@font-face {
-  font-family: 'riesling';
-  src: url('/fonts/riesling.ttf');
-}
 
-@font-face {
-  font-family: 'light';
-  src: url('/fonts/light.ttf');
-}
-
-@font-face {
-  font-family: 'icons';
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer');
-}
-
-@media only screen and (max-width: 760px) {
-  p{
-    margin-left: 3em;
-    margin-right: 2em;
-  }
-
-  .bouton-container{
-    margin-top: 1em;
-    display: flex;
-    gap: 1em;
-  }
-
-  button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    width: 10em;
-    padding: 0.5em 1em;
-    font-size: 0.7em;
-    font-weight: 500;
-    font-family: 'riesling';
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    transition: border-color 0.25s;
-  }
-
-}
-
-h1 {
+.presentation h1 {
   margin-bottom: 0.1em;
-
 }
 
-p{
+.presentation p {
   font-family: 'light';
   font-size: 0.5em;
   font-weight: bold;
@@ -86,102 +117,176 @@ p{
   padding-right: 20px;
 }
 
-.bouton-container{
-  margin-top: 1em;
+/* Container des boutons */
+.bouton-container {
   display: flex;
-  gap: 1em;
-}
-
-.switch{
-  display: flex;
-  width: 100vw;
-  height: 100px;
   justify-content: center;
-  align-items: center;
-  box-shadow: #00000008; 
-
+  gap: 1em;
+  margin-bottom: 2em;
 }
+
+/* Section projets */
+.projet {
+  margin-top: 7em;
+}
+
+.projet h1 {
+  font-family: 'riesling';
+}
+
+.projet h2 {
+  font-family: 'riesling';
+  font-size: 3em;
+}
+
+.projet p {
+  font-family: 'light';
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.projet-liste {
+  display: flex;
+  flex-direction: column; 
+  gap: -10%; 
+}
+
 
 /* THEMES */
 #jour {
-
-  /*
-  #B1A09B
-  #FEECE6
-  #FAD7C4
-  #66B7AD
-  #C4FDFB
-  */
   background-color: #FAD7C4;
 }
 
 #nuit {
-
-  /*
-  #2E3244
-  #C5C6C6
-  #FFFFFF
-  #F1895C
-  #516079
-  */
-  background-color:#2E3244;
+  background-color: #2E3244;
 }
 
-#jour h1{
+#jour .presentation h1 {
   font-family: 'riesling';
   font-size: 5em;
   color: #66B7AD;
 }
 
-#jour button:hover{
+#jour button:hover {
   border-color: #66B7AD;
   color: #66B7AD;
 }
-#jour button{
+
+#jour button {
   background-color: #FEECE6;
   color: #B1A09B;
 }
 
-#jour p{
-  color: #66B7AD
+#jour .presentation p {
+  color: #66B7AD;
 }
 
-#nuit h1{
+#jour .projet h1 {
+  color: #66B7AD;
+}
+
+#jour .projet h2{
+  color: black;
+}
+
+#nuit .presentation h1 {
   font-family: 'riesling';
   font-size: 5em;
   color: #F1895C;
 }
 
-#nuit p{
+#nuit .presentation p {
   color: white;
 }
 
-#nuit button:hover{
+#nuit .projet p, h2 {
+  color: #C5C6C6;
+}
+
+#nuit .projet h1 {
+  color: #F1895C;
+}
+
+#nuit button:hover {
   border-color: #F1895C;
   color: #F1895C;
 }
-#nuit button{
+
+#nuit button {
   background-color: #516079;
   color: #C5C6C6;
 }
 
+/* Animation des étoiles */
 #nuit .etoile {
   position: absolute;
-  background-image: url('/public/etoile.png'); 
-  background-size: contain; 
-  background-repeat: no-repeat; 
-  width: 10px; 
-  height: 10px; 
-  animation: fall 5s linear; 
+  background-image: url('/public/etoile.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  animation: fall 5s linear;
 }
 
 @keyframes fall {
   from {
-    top: -10px; 
+    top: -10px;
   }
   to {
-    top: 100%; 
+    top: 100%;
   }
 }
 
 
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  .side-bar {
+    width: 60px; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-layout {
+    flex-direction: column; 
+  }
+  .side-bar {
+    flex-direction: row; 
+    width: 100%; 
+    height: auto;
+  }
+  .switch {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 20px; 
+  }
+  .content {
+    height: calc(100vh - 80px); 
+    padding: 1em;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .side-bar {
+    padding: 10px;
+  }
+  .content {
+    padding: 1em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 0.6em;
+  }
+}
